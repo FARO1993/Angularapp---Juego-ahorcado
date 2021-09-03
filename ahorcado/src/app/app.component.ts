@@ -42,4 +42,16 @@ export class AppComponent {
   constructor() {
     this.palabraOculta = '_ '.repeat(this.palabra.length);
   }
+
+  comprobar(letra: any) {
+    const palabraOcultaArr = this.palabraOculta.split(' ');
+
+    for (let i = 0; i < this.palabra.length; i++) {
+      if (this.palabra[i] === letra) {
+        palabraOcultaArr[i] = letra;
+      }
+    }
+
+    this.palabraOculta = palabraOcultaArr.join(' ');
+  }
 }
