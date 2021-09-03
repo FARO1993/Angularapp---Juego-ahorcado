@@ -5,6 +5,10 @@ import { Component } from '@angular/core';
   templateUrl: './app.component.html',
 })
 export class AppComponent {
+  palabra = 'COBAYO';
+
+  palabraOculta = '';
+
   letras = [
     'A',
     'B',
@@ -36,6 +40,6 @@ export class AppComponent {
   ];
 
   constructor() {
-    console.log('Se acaba de crear el app component');
+    this.palabraOculta = '_ '.repeat(this.palabra.length);
   }
 }
